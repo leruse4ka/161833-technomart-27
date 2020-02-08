@@ -9,7 +9,12 @@
         <img src="img/logo-index.png" width="110" height="20" alt="Логотип Техномарта">
     </div>
     </a>
-    <!--Здесь будет поиск-->
+    <form class="search" action="https://echo.htmlacademy.ru/courses" method="GET">
+      <p>
+        <label class="visually-hidden" for="search">Поиск товара</label>
+        <input id="search" type="search" name="search" placeholder="Поиск:">
+      </p>
+    </form>
     <a href="">Закладки</a>
     <a href="" class="spopping-basket">Корзина</a>
     <a href="">Оформить заказ</a>
@@ -49,9 +54,12 @@
   </header>
   <main>
     <ul class="breadcrumbs">
-      <li><a href="index.html"><img src="icon.jpg"></a></li>
+      <li><a href="index.html"><img src="img/icon-home.svg"></a></li>
+      <li><img src="img/icon-right-small.svg"></li>
       <li><a href="catalog.html">Каталог</a></li>
+      <li><img src="img/icon-right-small.svg"></li>
       <li><a href="">Инструмент</a></li>
+      <li><img src="img/icon-right-small.svg"></li>
       <li class="breadcrumbs-current">Перфораторы</li>
     </ul>
     <h1>
@@ -59,6 +67,61 @@
     </h1>
     <section class="filters">
     <!--Здесь будут формы фильтров-->
+      <form class="filter" action="https://echo.htmlacademy.ru/courses" method="GET">
+        <fieldset>
+          <legend>Производители</legend>
+          <ul>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" name="manufactures-bosch" checked placeholder="bosch">
+                Bosch
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" name="manufactures-interskol" placeholder="интерскол">
+                Интерскол
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" name="manufactures-makita" checked placeholder="makita">
+                Makita
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" name="manufactures-dewalt" placeholder="dewalt">
+                Dewalt
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" name="manufactures-hitachi" placeholder="hitachi">
+                Hitachi
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="supply">
+          <legend>Питание</legend>
+          <ul>
+            <li class="filter-option">
+              <label>
+                <input type="radio" name="supply" checked>
+                Аккумуляторные
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input type="radio" name="supply">
+                Сетевые
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="button" class="button button-filter">Показать</button>
+      </form>
     </section>
     <section class="catalog">
       <!--Здесь будет сортировка-->
@@ -102,7 +165,7 @@
         </li>
         <li class="catalog-item">
           <img src="img/product-1.jpg" width="220" height="165" alt="Перфоратор BOSCH BFG 3000">
-          <span class="new-item">new</span>
+          <span class="new-item">new</span><br>
           <b class="old-price">22500 Р.</b>
           <b>15500 Р.</b>
         </li>
@@ -118,6 +181,13 @@
           <b class="new-price">15500 Р.</b>
         </li>
       </ul>
+    </section>
+    <section class="modal modal-cart">
+      <h2 class="visually-hidden">Корзина</h2>
+      <p>Товар добавлен в корзину!</p>
+      <button type="button" class="modal-close">Закрыть</button>
+      <a href="" class="modal-checkout">Оформить заказ</a>
+      <button type="button" class="button button-checkout">Продолжить покупки</button>
     </section>
   </main>
   <footer class="main-footer">

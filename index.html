@@ -7,18 +7,24 @@
   <body>
     <header class="main-header">
       <div class="logo"><img src="img/logo-index.png" width="110" height="20" alt="Логотип Техномарта"></div>
-      <!--Здесь будет поиск-->
+      <form class="search" action="https://echo.htmlacademy.ru/courses" method="GET">
+        <p>
+          <label class="visually-hidden" for="search">Поиск товара</label>
+          <input id="search" type="search" name="search" placeholder="Поиск:">
+        </p>
+      </form>
       <a href="">Закладки</a>
       <a href="">Корзина</a>
+      <a href="">Оформить заказ</a>
       <section class="main-header contacts">
         <p>
           Интернет-магазин<br>
           строительных материалов<br>
           и инструментов для ремонта
         </p>
-        <a class="main-header telephone">
-            +7 (812) 555-05-55
-        </a>
+        <p class="main-header telephone">
+          <a href="">+7 (812) 555-05-55</a>
+       </p>
         <p>
           г.Санкт-Петербург, ул. Б.Конюшенная,д. 19/8
         </p>
@@ -70,6 +76,30 @@
         </p>
         <a href=""><img src="img/map.jpg" alt="Карта"></a>
         <a href="">Заблудились? Напишите нам!</a>
+      </section>
+      <section class="modal modal-map">
+        <h2 class="visually-hidden">Карта</h2>
+        <button type="button" class="modal-close">Закрыть</button>
+        <a href=""><img src="img/map_popup.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
+      </section>
+      <section class="modal modal-feedback">
+        <h2>Форма обратной связи</h2>
+        <button class="modal-close" type="button">Закрыть</button>
+        <form action="https://echo.htmlacademy.ru/courses" method="POST">
+          <label>
+            Ваше имя:
+            <input type="text" name="name" placeholder="Имя Фамилия">
+          </label>
+          <label>
+            Ваш e-mail:
+            <input type="email" name="email" placeholder="email@example.com">
+          </label>
+          <label>
+            Текст письма
+            <textarea name="text-feedback" placeholder="В свободной форме"></textarea>
+          </label>
+          <button class="button modal-button" type="submit">Отправить</button>
+        </form>
       </section>
     </main>
     <footer class="main-footer">
