@@ -2,23 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title>HTML Academy: Техномарт</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <header class="main-header">
-    <a class="main-header-logo" href="index.html">
-      <div>
-        <img src="img/logo-index.png" width="110" height="20" alt="Логотип Техномарта">
+    <div class="main-header top-menu">
+      <div class="logo">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/logo-index.png" width="110" height="20" alt="Логотип Техномарта">
+        </a>
+      </div>
+      <form class="search" action="https://echo.htmlacademy.ru/courses" method="GET">
+        <p>
+          <label class="visually-hidden" for="search">Поиск товара</label>
+          <input id="search" type="search" name="search" placeholder="Поиск:">
+          <button class="visually-hidden" type="submit">Отправить</button>
+        </p>
+      </form>
+      <a class="bookmarks" href="">Закладки:</a>
+      <a class="shopping-basket" href="" class="spopping-basket">Корзина:</a>
+      <a class="checkout" href="">Оформить заказ</a>
     </div>
-    </a>
-    <form class="search" action="https://echo.htmlacademy.ru/courses" method="GET">
-      <p>
-        <label class="visually-hidden" for="search">Поиск товара</label>
-        <input id="search" type="search" name="search" placeholder="Поиск:">
-        <button type="submit">Отправить</button>
-      </p>
-    </form>
-    <a href="">Закладки</a>
-    <a href="" class="spopping-basket">Корзина</a>
-    <a href="">Оформить заказ</a>
     <section class="main-header contacts">
       <p>
         Интернет-магазин<br>
@@ -31,8 +36,8 @@
       <p>
         г.Санкт-Петербург, ул. Б.Конюшенная,д. 19/8
       </p>
-      <ul class="user-navigation authorized profile">
-        <li class="profile"><a href=""></a></li>
+      <ul class="user-navigation authorized-profile">
+        <li class="profile"><a href="">Профиль</a></li>
         <li class="profile"><a href="">Равшан Джамшутович</a></li>
         <li class="profile"><a href="">Выход</a></li>
       </ul>
@@ -53,9 +58,9 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="inner-page">
     <ul class="breadcrumbs">
-      <li><a href="index.html"></a></li>
+      <li class="home"><a href="index.html"></a></li>
       <li><a href="catalog.html">Каталог</a></li>
       <li><a href="">Инструмент</a></li>
       <li class="breadcrumbs-current">Перфораторы</li>
@@ -128,55 +133,57 @@
           <img src="img/product-1.jpg" width="220" height="165" alt="Перфоратор BOSCH BFG 3000">
           <p>Перфоратор BOSCH BFG 3000</p>
           <b class="old-price">22500 Р.</b>
-          <b>15500 Р.</b>
+          <b class="price">15500 Р.</b>
         </li>
         <li class="catalog-item">
           <img src="img/product-2.jpg" width="220" height="165" alt="Перфоратор BOSCH BFG 6000">
           <p>Перфоратор BOSCH BFG 6000</p>
           <b class="old-price">30500 Р.</b>
-          <b>22500 Р.</b>
+          <b class="price">22500 Р.</b>
         </li>
         <li class="catalog-item">
-          <a href="">Купить</a>
-          <a href="">В закладки</a>
+          <a class="buy" href="">Купить</a>
+          <a class="in-bookmarks" href="">В закладки</a>
           <span class="new-item">new</span>
           <p>Перфоратор BOSCH BFG 2000</p>
-          <b>12500 Р.</b>
+          <b class="price">12500 Р.</b>
         </li>
         <li class="catalog-item">
           <img src="img/product-1.jpg" width="220" height="165" alt="Перфоратор BOSCH BFG 3000">
           <p>Перфоратор BOSCH BFG 3000</p>
           <b class="old-price">22500 Р.</b>
-          <b>15500 Р.</b>
+          <b class="price">15500 Р.</b>
         </li>
         <li class="catalog-item">
           <img src="img/product-2.jpg" width="220" height="165" alt="Перфоратор BOSCH BFG 6000">
           <span class="new-item">new</span>
           <p>Перфоратор BOSCH BFG 6000</p>
           <b class="old-price">30500 Р.</b>
-          <b>22500 Р.</b>
+          <b class="price">22500 Р.</b>
         </li>
         <li class="catalog-item">
           <img src="img/product-3.jpg" width="220" height="165" alt="Перфоратор BOSCH BFG 2000">
           <p>Перфоратор BOSCH BFG 2000</p>
-          <b>12500 Р.</b>
+          <b class="price">12500 Р.</b>
         </li>
         <li class="catalog-item">
           <img src="img/product-1.jpg" width="220" height="165" alt="Перфоратор BOSCH BFG 3000">
           <span class="new-item">new</span>
+          <p>Перфоратор BOSCH BFG 3000</p>
           <b class="old-price">22500 Р.</b>
-          <b>15500 Р.</b>
+          <b class="price">15500 Р.</b>
         </li>
         <li class="catalog-item">
           <img src="img/product-2.jpg" width="220" height="165" alt="Перфоратор BOSCH BFG 6000">
           <p>Перфоратор BOSCH BFG 6000</p>
           <b class="old-price">30500 Р.</b>
-          <b>22500 Р.</b>
+          <b class="price">22500 Р.</b>
         </li>
         <li class="catalog-item">
           <img src="img/product-3.jpg" width="220" height="165" alt="Перфоратор BOSCH BFG 2000">
+          <span class="new-item">new</span>
           <p>Перфоратор BOSCH BFG 2000</p>
-          <b class="new-price">15500 Р.</b>
+          <b class="price">15500 Р.</b>
         </li>
       </ul>
     </section>
@@ -218,19 +225,19 @@
       </p>
       <div class="footer-social">
         <ul>
-          <li class="social-button">VK</li>
-          <li class="social-button">Facebook</li>
-          <li class="social-button">Instagramm</li>
+          <li class="social-button"><a href="">VK</a></li>
+          <li class="social-button"><a href="">Facebook</a></li>
+          <li class="social-button"><a href="">Instagramm</a></li>
         </ul>
       </div>
       <p class="feedback">
         Обратная связь:<br>
-        <span>mail@htmlacademy.ru</span>
+        <a href="">mail@htmlacademy.ru</a>
       </p>
       <p class="copyright">
-        Разработано -
+        Разработано -<br>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
       </p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
     </section>
   </footer>
 </html>
