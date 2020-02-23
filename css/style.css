@@ -14,8 +14,21 @@ body {
 
   background-color: #ee3643;
 }
-.main-header {
-  background-color: #f3f7f8;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.container {
+  width:940px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.main-header,
+.inner-header {
+  background-color:#f4f7f9;
 }
 .top-menu {
   background-color:#293449;
@@ -56,7 +69,7 @@ body {
 .logo:focus {
   background-color: #ba2732;
 }
-.top-menu:active:not(.search) {
+.top-menu p:active:not(.search) {
   background-color: #161d29;
 }
 .search input:focus {
@@ -65,8 +78,8 @@ body {
   background-color:#ffffff;
 }
 .header-info {
-  font-size: 21px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 23px;
   color:#ee3643;
   font-style: italic;
 }
@@ -310,4 +323,236 @@ body {
 .new-item {
   background-image: url(../img/new-flag.jpg);
   background-repeat: no-repeat;
+}
+
+/* Сетка*/
+.main-header {
+  height:320px;
+  margin-bottom:60px;
+}
+.inner-header {
+  height:320px;
+}
+.top-menu .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:42px;
+}
+.top-menu-left {
+  display: flex;
+  width:400px;
+}
+.logo {
+  width:220px;
+  height:51px;
+  text-align: center;
+}
+.logo img {
+  margin-top:13px;
+}
+.top-menu-right {
+  width:450px;
+  margin-left:auto;
+  display:flex;
+  justify-content: space-between;
+}
+.top-menu-right p {
+  width:150px;
+  height:32px;
+  text-align: center;
+  padding-top: 10px;
+}
+.header-contacts {
+  display: flex;
+  height:155px;
+  justify-content: space-between;
+}
+.telephone {
+  padding:0;
+  padding-top: 10px;
+  margin:0;
+  margin-top:45px;
+  width:270px;
+  height:30px;
+  text-align: center;
+}
+.header-address {
+  padding-left:5px;
+}
+.header-info {
+  padding-left: 50px;
+  margin:0;
+  margin-top:45px;
+  margin-bottom:45px;
+}
+.not-authorized {
+  display: flex;
+  width:300px;
+  height:45px;
+  padding:0;
+  margin:0;
+  margin-top:45px;
+
+}
+.not-authorized li:first-child {
+  margin-right:10px;
+}
+.authorized-profile-wrapper {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top:45px;
+  width:300px;
+  margin-bottom:45px;
+}
+.authorized-profile{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding:0;
+  margin:0;
+  height:45px;
+
+}
+.authorized-profile profile:last-child {
+  margin-left:auto;
+}
+.authorized {
+  display:flex;
+  list-style: none;
+}
+.authorized li {
+  margin-left:10px;
+  margin-top: 0;
+}
+.main-navigation {
+  height:55px;
+  margin-bottom:60px;
+}
+.navigation-wrapper {
+  margin: 0 20px;
+}
+.main-navigation ul {
+  display: flex;
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+.main-navigation li {
+  margin:0;
+  padding:0;
+  flex-grow: 1;
+  text-align: center;
+}
+.main-contacts-info {
+  display: flex;
+  height:540px;
+}
+.main-info {
+  margin-top:100px;
+  width:540px;
+  margin-right:100px;
+}
+.contacts-map {
+  margin-top:100px;
+  width:300px;
+}
+.footer-contacts .container {
+  display:flex;
+  height:195px;
+  padding:0px;
+}
+.logo-address {
+  width:380px;
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  width:550px;
+  padding:0px;
+  margin-top:20px;
+}
+.footer-nav-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:25px;
+}
+.footer-nav-bottom {
+  display: flex;
+  justify-content: space-around;
+}
+.footer-logo {
+  height:70px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom:30px;
+}
+.footer-logo img {
+  margin-top:20px;
+}
+.footer-copyright .container{
+  display: flex;
+}
+.feedback-copyright {
+  display:flex;
+  justify-content: space-between;
+  width:300px;
+  margin-left: auto;
+}
+.copyright-info {
+  width:230px;
+  margin-right:160px;
+}
+.breadcrumbs {
+  display:flex;
+  align-items: space-between;
+  height:20px;
+  width:380px;
+  list-style: none;
+  padding:0px;
+  padding-top: 20px;
+  margin:0;
+}
+.inner-page{
+  margin:0px;
+  padding:0px;
+}
+.breadcrumbs .home {
+  width:20px;
+}
+.breadcrumbs li {
+  margin-left: 10px;
+}
+.inner-page h1 {
+  padding:30px;
+}
+.catalog-wrapper {
+  display: flex;
+}
+.filter {
+  width:220px;
+  height:500px;
+}
+.filter li {
+  margin-bottom: 10px;
+  padding:0;
+}
+.catalog {
+  width:720px;
+  margin-bottom:10px;
+}
+.catalog-list {
+  display: flex;
+  flex-wrap:wrap;
+
+  margin:0;
+  padding:0;
+}
+.catalog-item {
+  width:218px;
+  height:330px;
+  margin-top:20px;
+  margin-left:15px;
 }
