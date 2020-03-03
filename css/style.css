@@ -619,6 +619,7 @@ input[type="radio"].visually-hidden {
   color:#ffffff;
   background-color: #63a63e;
   box-shadow: inset 0px -3px 0px 0px rgba(54, 115, 21, 1);
+  border-radius: 2px;
   display: block;
   width:135px;
   height:38px;
@@ -641,6 +642,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   text-align:center;
   padding-top:9px;
+  border-radius: 2px;
 }
 
 .catalog-item:hover img,
