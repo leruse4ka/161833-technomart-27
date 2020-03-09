@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Техномарт</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans&display=swap&subset=cyrillic"
     rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/min-style.css" rel="stylesheet">
 </head>
 <header class="inner-header">
   <div class="top-menu">
@@ -39,9 +40,9 @@
         </p>
         <p class="shopping-basket">
           <a class="cart" href="">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 15 15"
-              enable-background="new 0 0 15 15" xml:space="preserve">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15"
+              xml:space="preserve">
               <g>
                 <circle cx="4.5" cy="13.5" r="1.5" />
                 <circle cx="12.5" cy="13.5" r="1.5" />
@@ -75,9 +76,9 @@
           <li class="profile">
             <a class="profile-avatar" href="">
               <p class="visually-hidden">Проф</p>
-              <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="18px"
-                viewBox="0 0 20 18" enable-background="new 0 0 20 18" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" width="20px" height="18px" viewBox="0 0 20 18" enable-background="new 0 0 20 18"
+                xml:space="preserve">
                 <path fill="#32425C"
                   d="M17.881,14.166c-2.144-0.735-4.256-1.666-5.207-2.39c-0.657-0.501-0.77-1.618-0.517-2.415
 	c1.118-0.903,1.864-2.477,1.864-4.278C14.021,2.276,12.221,0,10,0S5.979,2.276,5.979,5.083c0,1.801,0.746,3.374,1.863,4.277
@@ -91,9 +92,9 @@
           <li class="profile">
             <a class="logout-link" href="">
               <p class="visually-hidden">Выход</p>
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="17px"
-                viewBox="0 0 21 17" enable-background="new 0 0 21 17" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" width="21px" height="17px" viewBox="0 0 21 17" enable-background="new 0 0 21 17"
+                xml:space="preserve">
                 <g>
                   <polygon fill="#32425C" points="21,8.5 12.125,0 12.125,6 6.125,6 6.125,11 12.125,11 12.125,17 	" />
                   <path fill="#32425C" d="M3.106,13.952V3.048c0.018-0.376,0.171-1.057,1.01-1.057h5.027V0H4.116C1.938,0,1.112,1.81,1.087,3.027
@@ -136,8 +137,9 @@
     </nav>
   </div>
 </header>
-<div class="container">
-  <main class="inner-page">
+
+<main class="inner-page">
+  <div class="container">
     <ul class="breadcrumbs">
       <li class="home"><a class="breadcrumbs-home" href="index.html"></a></li>
       <li><a href="catalog.html">Каталог</a></li>
@@ -149,41 +151,61 @@
     </h1>
     <div class="catalog-wrapper">
       <section class="filters">
+        <h3 class="filters-header">Фильтр:</h3>
         <form class="filter" action="https://echo.htmlacademy.ru/courses" method="GET" name="Фильтр">
+          <fieldset>
+            <legend>Цена</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label for="price-min" class="visually-hidden">От</label>
+                <input id="price-min" type="text" class="input-price-left" value="0">
+                <div class="price-scale"></div>
+                <label for="price-max" class="visually-hidden">До</label>
+                <input id="price-max" type="text" class="input-price-right" value="30000">
+              </div>
+            </div>
+          </fieldset>
           <fieldset>
             <legend>Производители:</legend>
             <ul>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" id="manufactures-bosch"
-                  type="checkbox" name="manufactures-bosch" checked placeholder="bosch">
+                  type="checkbox" name="manufactures-bosch" checked>
                 <label for="manufactures-bosch">
                   Bosch
                 </label>
               </li>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" id="manufactures-interskol"
-                  type="checkbox" name="manufactures-interskol" placeholder="интерскол">
+                  type="checkbox" name="manufactures-interskol">
                 <label for="manufactures-interskol">
                   Интерскол
                 </label>
               </li>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" id="manufactures-makita"
-                  type="checkbox" name="manufactures-makita" checked placeholder="makita">
+                  type="checkbox" name="manufactures-makita" checked>
                 <label for="manufactures-makita">
                   Makita
                 </label>
               </li>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" id="manufactures-dewalt"
-                  type="checkbox" name="manufactures-dewalt" placeholder="dewalt">
+                  type="checkbox" name="manufactures-dewalt">
                 <label for="manufactures-dewalt">
                   Dewalt
                 </label>
               </li>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" id="manufactures-hitachi"
-                  type="checkbox" name="manufactures-hitachi" placeholder="hitachi">
+                  type="checkbox" name="manufactures-hitachi">
                 <label for="manufactures-hitachi">
                   Hitachi
                 </label>
@@ -212,7 +234,36 @@
         </form>
       </section>
       <section class="catalog">
-        <!--Здесь будет сортировка-->
+        <div class="sorting">
+          <p class="sorting-header">
+            Сортировка:
+          </p>
+          <ul class="sorting-list">
+            <li class="sorting-item">
+              <p>
+                <span>По цене</span>
+              </p>
+            </li>
+            <li class="sorting-item">
+              <p>
+                <span>По типу</span>
+              </p>
+            </li>
+            <li class="sorting-item">
+              <p>
+                <span>По функционалу</span>
+              </p>
+            </li>
+          </ul>
+          <ul class="sorting-up-down">
+            <li class="sorting-up">
+              <span class="visually-hidden">Up</span>
+            </li>
+            <li class="sorting-down">
+              <span class="visually-hidden">Down</span>
+            </li>
+          </ul>
+        </div>
         <ul class="catalog-list">
           <li class="catalog-item">
             <img src="img/product-1.jpg" width="218" height="165" alt="Перфоратор BOSCH BFG 3000">
@@ -322,19 +373,46 @@
             <b class="price">15500 Р.</b>
           </li>
         </ul>
+        <ul class="pagination-list">
+          <li class="pagination-item pagination-item-current">
+            <a>1</a>
+          </li>
+          <li class="pagination-item">
+            <a href="">2</a>
+          </li>
+          <li class="pagination-item">
+            <a href="">3</a>
+          </li>
+          <li class="pagination-item next-page">
+            <a href="">Следующая</a>
+          </li>
+        </ul>
       </section>
     </div>
     <section class="modal modal-cart">
       <h2 class="visually-hidden">Корзина</h2>
       <p>Товар добавлен в корзину!</p>
-      <button type="button" class="modal-close"><p>Закрыть</p></button>
+      <button type="button" class="modal-close"><span class="visually-hidden">Закрыть</span></button>
       <div class="button-wrapper">
         <a href="" class="button-link modal-checkout">Оформить заказ</a>
         <button type="button" class="button button-checkout">Продолжить покупки</button>
       </div>
     </section>
-  </main>
-</div>
+  </div>
+  <section class="inner-info">
+    <div class="container">
+      <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
+      <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче,
+        бетоне и камне.<br>
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+        шуруповерта и отбойного молотка.<br>
+        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная
+        дрель.</p>
+    </div>
+  </section>
+
+</main>
+
 <footer class="main-footer">
   <section class="footer-contacts">
     <div class="container">
@@ -401,7 +479,6 @@
       </div>
     </div>
   </section>
-  </div>
 </footer>
 
 </html>

@@ -3,20 +3,22 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Техномарт</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans&display=swap&subset=cyrillic"
     rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/min-style.css" rel="stylesheet">
 </head>
-
 <body>
   <header class="main-header">
     <div class="top-menu">
       <div class="container">
         <div class="top-menu-left">
           <div class="logo">
-            <img src="img/logo-index.png" width="110" height="18" alt="Логотип Техномарта">
+            <a class="main-header-logo">
+              <img src="img/logo-index.png" width="110" height="18" alt="Логотип Техномарта">
+            </a>
           </div>
           <form class="search" action="https://echo.htmlacademy.ru/courses" method="GET">
             <p>
@@ -77,9 +79,9 @@
         <ul class="user-navigation not-authorized">
           <li>
             <a class="login-link">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="17px"
-                viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17"
+                xml:space="preserve">
                 <g>
                   <polygon fill="#32425C" points="14.875,8.5 6,0 6,6 0,6 0,11 6,11 6,17 	" />
                 </g>
@@ -120,7 +122,226 @@
     </div>
   </header>
   <main>
-    <!--Здесь будет форма-->
+    <div class="container">
+      <section class="tools-slider">
+        <ul class="tools-list">
+          <li class="tools-item">
+            <div class="new-item">new</div>
+            <p>Материалы</p>
+            <a href="">На любой вкус</a>
+          </li>
+          <li class="tools-item">
+            <p>Инструмент</p>
+            <a href="">На все случаи</a>
+          </li>
+          <li class="tools-item">
+            <p>Техника</p>
+            <a href="">Для стройки</a>
+          </li>
+          <li class="tools-item-slider">
+            <input class="visually-hidden product-1" type="radio" id="product-1" name="toggle" checked>
+            <input class="visually-hidden product-2" type="radio" id="product-2" name="toggle">
+            <div class="slider">
+              <div class="main-slider">
+                <div class="slider-controls">
+                  <label for="product-1">Первый</label>
+                  <label for="product-2">Второй</label>
+                </div>
+                <ul class="slider-list">
+                  <li class="slider-photo slide" id="slide1">
+                    <h3>Перфораторы</h3>
+                    <p>Настоящие мужские игрушки</p>
+                    <a class="button-link button-slider" href="catalog.html">Открыть каталог</a>
+                  </li>
+                  <li class="slider-photo slide" id="slide2">
+                    <h3>Дрели</h3>
+                    <p>Соседям на радость!</p>
+                    <a class="button-link button-slider" href="catalog.html">Открыть каталог</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tools-item item-right">
+              <p>Скидки 50%</p>
+              <a href="">На 350 товаров</a>
+            </div>
+            <div class="tools-item item-right">
+              <p>Доставка</p>
+              <a href="">Бесплатно</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="popular-items">
+        <div class="popular-wrapper">
+          <h3>Популярные товары</h3>
+          <a class="button-link button-popular-items" href="">Все популярные товары</a>
+        </div>
+        <ul class="catalog-list popular-list">
+          <li class="catalog-item">
+            <img src="img/product-4.jpg" width="218" height="165" alt="Перфоратор BOSCH BFG 9000">
+            <div class="item-menu-wrapper">
+              <a class="buy" href="">Купить</a>
+              <a class="in-bookmarks" href="">В закладки</a>
+            </div>
+            <p>
+              Перфоратор BOSCH BFG 9000
+              <b class="old-price">32500 Р.</b>
+            </p>
+            <b class="price">25500 Р.</b>
+          </li>
+          <li class="catalog-item">
+            <img src="img/product-1.jpg" width="218" height="165" alt="Перфоратор BOSCH BFG 3000">
+            <div class="item-menu-wrapper">
+              <a class="buy" href="">Купить</a>
+              <a class="in-bookmarks" href="">В закладки</a>
+            </div>
+            <p>
+              Перфоратор BOSCH BFG 3000
+              <b class="old-price">22500 Р.</b>
+            </p>
+            <b class="price">15500 Р.</b>
+          </li>
+          <li class="catalog-item">
+            <img src="img/product-2.jpg" width="218" height="165" alt="Перфоратор BOSCH BFG 6000">
+            <div class="item-menu-wrapper">
+              <a class="buy" href="">Купить</a>
+              <a class="in-bookmarks" href="">В закладки</a>
+            </div>
+            <p>
+              Перфоратор BOSCH BFG 6000
+              <b class="old-price">30500 Р.</b>
+            </p>
+            <b class="price">22500 Р.</b>
+          </li>
+          <li class="catalog-item">
+            <img src="img/product-3.jpg" width="218" height="165" alt="Перфоратор BOSCH BFG 2000">
+            <div class="item-menu-wrapper">
+              <a class="buy" href="">Купить</a>
+              <a class="in-bookmarks" href="">В закладки</a>
+            </div>
+            <div class="new-item">new</div>
+            <p>Перфоратор BOSCH BFG 2000</p>
+            <b class="price">12500 Р.</b>
+          </li>
+        </ul>
+      </section>
+      <section class="popular-manufacturers">
+        <div class="popular-wrapper">
+          <h3>Популярные производители</h3>
+          <a class="button-link button-popular-items" href="">Все производители</a>
+        </div>
+        <ul class="manufacturers-list">
+          <li class="manufacturers-item">
+            <a href="">
+              <p>
+                <img src="img/bosch.png" width="126" height="37" alt="Логотип производителя BOSCH">
+              </p>
+            </a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="">
+              <p>
+                <img src="img/makita.png" width="123" height="40" alt="Логотип производителя Makita">
+              </p>
+            </a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="">
+              <p>
+                <img src="img/dewalt.png" width="146" height="44" alt="Логотип производителя DeWALT">
+              </p>
+            </a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="">
+              <p>
+                <img src="img/interskol.png" width="200" height="88" alt="Логотип производителя Интерскол">
+              </p>
+            </a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="">
+              <p>
+                <img src="img/hitachi.png" width="169" height="31" alt="Логотип производителя Hitachi">
+              </p>
+            </a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="">
+              <p>
+                <img src="img/lg.png" width="121" height="73" alt="Логотип производителя LG">
+              </p>
+            </a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="">
+              <p>
+                <img src="img/aeg.png" width="151" height="96" alt="Логотип производителя AEG">
+              </p>
+            </a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="">
+              <p>
+                <img src="img/metabo.png" width="204" height="69" alt="Логотип производителя Metabo">
+              </p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <section class="services">
+      <div class="container">
+        <div class="services-heading-wrapper">
+          <h3>Сервисы</h3>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        </div>
+        <div class="services-slider">
+          <input class="visually-hidden delivery" type="radio" id="delivery" name="services" checked>
+          <input class="visually-hidden guarantee" type="radio" id="guarantee" name="services">
+          <input class="visually-hidden credit" type="radio" id="credit" name="services">
+          <div class="services-wrapper">
+            <div class="services-controls-wrapper">
+              <label for="delivery">Доставка</label>
+              <label for="guarantee">Гарантия</label>
+              <label for="credit">Кредит</label>
+            </div>
+            <ul class="services-slider-list">
+              <li class="services-slider-item slide" id="slide-delivery">
+                <div class="services-info">
+                  <h3>Доставка</h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо<br>
+                    к вашему подъезду совершенно бесплатно!<br>
+                    Ведь мы неплохо заработаем, <br>
+                    поднимая его на ваш этаж!</p>
+                </div>
+              </li>
+              <li class="services-slider-item slide" id="slide-guarantee">
+                <div class="services-info">
+                  <h3>Гарантия</h3>
+                  <p>Если купленный у нас товар поломается или заискрит,<br>
+                    а также в случае пожара, спровоцированного его возгоранием,<br>
+                    вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br> сгоревший товар на новый.<br>
+                    Дом уж восстановите как-нибудь сами.</p>
+                </div>
+              </li>
+              <li class="services-slider-item slide" id="slide-credit">
+                <div class="services-info">
+                  <h3>Кредит</h3>
+                  <p>Залезть в долговую яму стало проще!<br>
+                    Кредитные консультанты придут вам на помощь.</p>
+                  <a class="button-link button-services-credit" href="">Отправить заявку</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="container">
       <div class="main-contacts-info">
         <section class="main-info">
@@ -150,12 +371,11 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
           </p>
-          <a href=""><img src="img/map.jpg" alt="Карта"></a>
+          <a href=""><img src="img/map.jpg" width="300" height="158" alt="Карта"></a>
           <a class="button button-link button-link-contacts" href="">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </div>
-
   </main>
   <footer class="main-footer">
     <section class="footer-contacts">
@@ -223,20 +443,20 @@
         </div>
       </div>
     </section>
-    </div>
   </footer>
   <div class="container">
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта</h2>
       <button type="button" class="modal-close">
-        <p>Закрыть</p>
+        <span class="visually-hidden">Закрыть</span>
       </button>
-      <a href=""><img src="img/map_popup.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
+      <a href=""><img src="img/map_popup.png" width="940" height="446"
+          alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
     </section>
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <button class="modal-close" type="button">
-        <p>Закрыть</p>
+        <span class="visually-hidden">Закрыть</span>
       </button>
       <form class="feedback-form" action="https://echo.htmlacademy.ru/courses" method="POST">
         <div class="form-wrapper">
