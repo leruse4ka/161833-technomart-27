@@ -871,6 +871,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 .services-info p {
+  box-sizing: border-box;
   width: 375px;
   margin-top: 30px;
   margin-bottom: 0;
@@ -879,9 +880,11 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
 }
-.services-info span {
-  display: block;
+
+.services-info .info-delivery {
+  padding-right: 100px;
 }
+
 .services-info .button-services-credit {
   position: absolute;
   top: 131px;
