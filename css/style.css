@@ -2209,7 +2209,6 @@ input[type="radio"].visually-hidden {
 }
 .catalog-item:hover,
 .catalog-item:focus {
-  border: none;
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 .catalog-item:hover .item-menu-wrapper,
